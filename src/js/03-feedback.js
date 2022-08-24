@@ -11,11 +11,11 @@ function onFormData(event) {
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }
 
-function onSubmitForm(event) {
-  console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
+function onSubmitForm(event) { 
   event.preventDefault();
   event.currentTarget.reset();
   localStorage.removeItem('feedback-form-state');
+  console.log(formData);
 }
 
 (function dataFromLocalStorage() {
